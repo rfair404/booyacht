@@ -18,19 +18,19 @@ srand((double) microtime() * 1000000); //initalizing random generator
 $north = rand(0, 4);
 $west = rand(5, 9);
 
-for ($i = 0; $i < 10; $i+=1) {
+for ($i = 0; $i < 1; $i+=1) {
 
-	// switch ($i){
-	// 	case $north:
-	// 		do_north();
-	// 		break;
-	// 	case $west:
-	// 		do_west();
-	// 		break;
-	// 	default:
-	// 		do_random();
-	// 		break;
-	// }
+	switch ($i){
+		// case $north:
+		// 	do_north();
+		// 	break;
+		// case $west:
+		// 	do_west();
+		// 	break;
+		default:
+			do_random();
+			break;
+	}
 
 }
 
