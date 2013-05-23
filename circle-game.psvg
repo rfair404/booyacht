@@ -25,10 +25,10 @@ for ($i = 0; $i < 10; $i+=1) {
 			do_north();
 			break;
 		case $west:
-			do_west();
+			//do_west();
 			break;
 		default:
-			do_random();
+			//do_random();
 			break;
 	}
 
