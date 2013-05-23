@@ -1,0 +1,82 @@
+<?php
+header("Content-type: image/svg+xml");
+//set headers to NOT cache a page
+header("Cache-Control: no-cache, must-revalidate"); //HTTP 1.1
+header("Pragma: no-cache"); //HTTP 1.0
+header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
+
+echo '<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>';
+$svgwidth=500;
+$svgheight=400;
+?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
+<svg width="<?php echo $svgwidth;?>px" height="<?php echo $svgheight;?>px"
+xmlns="http://www.w3.org/2000/svg">
+<desc>Good luck solving this Geocache Puzzle</desc>
+<?php 
+
+srand((double) microtime() * 1000000); //initalizing random generator
+$north = rand(0, 4);
+$west = rand(5, 9);
+
+for ($i = 0; $i < 10; $i+=1) {
+
+	switch ($i){
+		case $north:
+			do_north();
+			break;
+		case $west:
+			do_west();
+			break;
+		default:
+			do_random();
+			break;
+	}
+
+}
+
+function do_random(){
+	global $svgwidth, $svgheight;
+
+	$x = floor(rand(0,$svgwidth-1)); //avoid getting a range 0..0 for rand function
+	$y = floor(rand(0,$svgheight-1));
+	$width = floor(rand(0,$svgwidth-$x)); //avoid getting rect outside of viewbox
+	$height = floor(rand(0,$svgheight-$y));
+	$red = floor(rand(0,255));
+	$blue = floor(rand(0,255));
+	$green = floor(rand(0,255));
+	$color = "rgb(".$red.",".$green.",".$blue.")";
+	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$width\" style=\"fill:$color;\"/>\n";
+}
+
+function do_north(){
+// set up the "north" rectangle
+	global $svgwidth, $svgheight;
+	$width = (int) '48';
+	$height = (int) '011';
+	$x = floor(rand(0,$svgwidth-$width));
+	$y = floor(rand(0,$svgheight-$height));
+	$red = (int) floor(rand(0,255));
+	$blue = (int) floor(rand(0,255));
+	$green = (int) floor(rand(0,255));
+
+	$color = 'rgb('.$red.','.$blue.','.$green.')';
+	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$width\" style=\"fill:$color;\"/>\n";
+}
+
+function do_west(){
+	// set up the "west" rectangle
+	global $svgwidth, $svgheight;
+	$width = (int) '09';
+	$height = (int) '103';
+	$x = floor(rand(0,$svgwidth-$width));
+	$y = floor(rand(0,$svgheight-$height));
+
+	$red = (int) floor(rand(0,255));
+	$blue = (int) floor(rand(0,255));
+	$green = (int) floor(rand(0,255));
+
+	$color = 'rgb('.$red.','.$blue.','.$green.')';
+	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$width\" style=\"fill:$color;\"/>\n";
+} ?>
+</svg>
