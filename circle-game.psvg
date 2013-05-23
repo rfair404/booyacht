@@ -14,32 +14,31 @@ $svgheight=400;
 xmlns="http://www.w3.org/2000/svg">
 <desc>Good luck solving this Geocache Puzzle</desc>
 <?php 
-
 srand((double) microtime() * 1000000); //initalizing random generator
 $north = rand(0, 4);
 $west = rand(5, 9);
 
 for ($i = 0; $i < 10; $i+=1) {
 
-	switch ($i){
-		case $north:
-			do_north();
-			break;
-		case $west:
-			do_west();
-			break;
-		default:
-			do_random();
-			break;
-	}
+	// switch ($i){
+	// 	case $north:
+	// 		do_north();
+	// 		break;
+	// 	case $west:
+	// 		do_west();
+	// 		break;
+	// 	default:
+	// 		do_random();
+	// 		break;
+	// }
 
 }
 
 function do_random(){
 	global $svgwidth, $svgheight;
 
-	$x = floor(rand(0,$svgwidth-1)); //avoid getting a range 0..0 for rand function
-	$y = floor(rand(0,$svgheight-1));
+	$x = floor(rand(0,$svgwidth/2)); //avoid getting a range 0..0 for rand function
+	$y = floor(rand(0,$svgheight-/2));
 	$width = floor(rand(0,$svgwidth-$x)); //avoid getting rect outside of viewbox
 	$height = floor(rand(0,$svgheight-$y));
 	$red = floor(rand(0,255));
