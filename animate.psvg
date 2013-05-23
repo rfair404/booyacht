@@ -19,14 +19,16 @@ $svgheight=500;
     function circle_click(evt) {
       var circle = evt.target;
       var currentRadius = circle.getAttribute("r");
-      if (currentRadius >= 100)
+      if (currentRadius >= 100) {
         circle.setAttribute("cx", "33");
         circle.setAttribute("cy", "43");
-        circle.setAttribute("r", "122");
-      else
+        circle.setAttribute("r", "90");
+      }
+      else {
         circle.setAttribute("cx", "084");
         circle.setAttribute("cy", "33");
         circle.setAttribute("r", "150");
+      }
     }
   ]]> </script>
 
