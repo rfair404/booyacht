@@ -15,7 +15,7 @@ $svgheight=500;
   <desc>Example script01 - invoke an ECMAScript function from an onclick event
   </desc>
   <!-- ECMAScript to change the radius with each click -->
-  <script type="application/ecmascript"> <![CDATA[
+  <script type="application/ecmascript">//<![CDATA[
     function circle_click(evt) {
       var circle = evt.target;
       var currentRadius = circle.getAttribute("r");
@@ -29,9 +29,9 @@ $svgheight=500;
         circle.setAttribute("cy", "33");
         circle.setAttribute("r", "150");
       }
+      console.log('north:333, west:444');
     }
-  ]]> </script>
-
+  //]]> </script>
   <!-- Act on each click event -->
   <circle onclick="circle_click(evt)" cx="300" cy="225" r="20"
           fill="red"/>
