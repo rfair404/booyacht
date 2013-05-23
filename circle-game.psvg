@@ -46,7 +46,7 @@ function do_random(){
 	$blue = floor(rand(0,255));
 	$green = floor(rand(0,255));
 	$color = "rgb(".$red.",".$green.",".$blue.")";
-	print "\t<circle random=\"yes\" cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\"/>\n";
+	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\"/>\n";
 }
 
 function do_north(){
