@@ -28,7 +28,7 @@ for ($i = 0; $i < 10; $i+=1) {
 			do_west();
 			break;
 		default:
-			//do_random();
+			do_random();
 			break;
 	}
 
