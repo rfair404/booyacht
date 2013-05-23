@@ -64,8 +64,16 @@ function do_north(){
 	$blue = (int) floor(rand(0,255));
 	$green = (int) floor(rand(0,255));
 
+	?><defs>
+    <filter id="f1" x="0" y="0">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+    </filter>
+  	</defs><?php
+
 	$color = 'rgb('.$red.','.$blue.','.$green.')';
-	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\"/>\n";
+	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\" filter=\"url(#f1)\"/>\n";
+
+
 }
 
 function do_west(){
