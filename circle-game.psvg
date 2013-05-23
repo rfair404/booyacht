@@ -41,7 +41,6 @@ function do_random(){
 	$x = floor(rand($r, $svgwidth-$r)); //avoid getting a range 0..0 for rand function
 	$y = floor(rand($r,$svgheight-$r));
 
-
 	$red = floor(rand(0,255));
 	$blue = floor(rand(0,255));
 	$green = floor(rand(0,255));
