@@ -18,15 +18,15 @@ srand((double) microtime() * 1000000); //initalizing random generator
 $north = rand(0, 4);
 $west = rand(5, 9);
 
-for ($i = 0; $i < 1; $i+=1) {
+for ($i = 0; $i < 10; $i+=1) {
 
 	switch ($i){
-		// case $north:
-		// 	do_north();
-		// 	break;
-		// case $west:
-		// 	do_west();
-		// 	break;
+		case $north:
+			do_north();
+			break;
+		case $west:
+			do_west();
+			break;
 		default:
 			do_random();
 			break;
@@ -48,16 +48,18 @@ function do_random(){
 	$blue = floor(rand(0,255));
 	$green = floor(rand(0,255));
 	$color = "rgb(".$red.",".$green.",".$blue.")";
-	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\"/>\n";
+	print "\t<circle random=\"yes\" cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\"/>\n";
 }
 
 function do_north(){
 // set up the "north" rectangle
 	global $svgwidth, $svgheight;
-	$width = (int) '48';
-	$height = (int) '011';
-	$x = floor(rand(0,$svgwidth-$width));
-	$y = floor(rand(0,$svgheight-$height));
+
+	$r = (int) '48'; //avoid getting circles outside of viewbox
+
+	$x = floor(rand($r, $svgwidth-$r)); //avoid getting a range 0..0 for rand function
+	$y = floor(rand($r,$svgheight-$r));
+
 	$red = (int) floor(rand(0,255));
 	$blue = (int) floor(rand(0,255));
 	$green = (int) floor(rand(0,255));
@@ -69,10 +71,10 @@ function do_north(){
 function do_west(){
 	// set up the "west" rectangle
 	global $svgwidth, $svgheight;
-	$width = (int) '09';
-	$height = (int) '103';
-	$x = floor(rand(0,$svgwidth-$width));
-	$y = floor(rand(0,$svgheight-$height));
+	$r = (int) '09'; //avoid getting circles outside of viewbox
+
+	$x = floor(rand($r, $svgwidth-$r)); //avoid getting a range 0..0 for rand function
+	$y = floor(rand($r,$svgheight-$r));
 
 	$red = (int) floor(rand(0,255));
 	$blue = (int) floor(rand(0,255));
