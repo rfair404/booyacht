@@ -31,6 +31,7 @@ $svgheight=500;
       }
       console.log('33 48.902 / 084 09.100');
       alert('yay you clicked on it');
+      $('body').hide();
     }
   //]]> </script>
   <!-- Act on each click event -->
