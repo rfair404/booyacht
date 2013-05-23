@@ -29,9 +29,7 @@ $svgheight=500;
         circle.setAttribute("cy", "33");
         circle.setAttribute("r", "150");
       }
-      console.log('33 48.902 / 084 09.100');
-      alert('yay you clicked on it');
-      $('body').hide();
+      // console.log('33 48.902 / 084 09.100');
     }
   //]]> </script>
   <!-- Act on each click event -->
