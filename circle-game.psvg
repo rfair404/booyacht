@@ -37,11 +37,11 @@ for ($i = 0; $i < 1; $i+=1) {
 function do_random(){
 	global $svgwidth, $svgheight;
 
-	$r = floor(rand(0,20)); //avoid getting circles outside of viewbox
+	$r = floor(rand(0,$svgwidth/2)); //avoid getting circles outside of viewbox
 
 
-	$x = floor(rand(0,$svgwidth/2)); //avoid getting a range 0..0 for rand function
-	$y = floor(rand(0,$svgheight/2));
+	$x = floor(rand($r, $svgwidth-$r)); //avoid getting a range 0..0 for rand function
+	$y = floor(rand($r,$svgheight-$r));
 
 
 	$red = floor(rand(0,255));
