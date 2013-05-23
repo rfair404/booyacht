@@ -62,7 +62,7 @@ function do_north(){
 	$green = (int) '205';
 
 	$color = 'rgb('.$red.','.$blue.','.$green.')';
-	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\" filter=\"url(#f1)\"/>\n";
+	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\"/>\n";
 
 
 }
