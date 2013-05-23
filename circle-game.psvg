@@ -25,7 +25,7 @@ for ($i = 0; $i < 10; $i+=1) {
 			do_north();
 			break;
 		case $west:
-			//do_west();
+			do_west();
 			break;
 		default:
 			//do_random();
@@ -38,8 +38,6 @@ function do_random(){
 	global $svgwidth, $svgheight;
 
 	$r = floor(rand(0,$svgwidth/2)); //avoid getting circles outside of viewbox
-
-
 	$x = floor(rand($r, $svgwidth-$r)); //avoid getting a range 0..0 for rand function
 	$y = floor(rand($r,$svgheight-$r));
 
@@ -55,20 +53,13 @@ function do_north(){
 // set up the "north" rectangle
 	global $svgwidth, $svgheight;
 
-	$r = (int) '48'; //avoid getting circles outside of viewbox
-
+	$r = floor(rand(0,$svgwidth/2)); //avoid getting circles outside of viewbox
 	$x = floor(rand($r, $svgwidth-$r)); //avoid getting a range 0..0 for rand function
 	$y = floor(rand($r,$svgheight-$r));
 
-	$red = (int) floor(rand(0,255));
-	$blue = (int) floor(rand(0,255));
-	$green = (int) floor(rand(0,255));
-
-	?><defs>
-    <filter id="f1" x="0" y="0">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
-    </filter>
-  	</defs><?php
+	$red = (int) '33';
+	$blue = (int) '48';
+	$green = (int) '205';
 
 	$color = 'rgb('.$red.','.$blue.','.$green.')';
 	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\" filter=\"url(#f1)\"/>\n";
@@ -79,14 +70,14 @@ function do_north(){
 function do_west(){
 	// set up the "west" rectangle
 	global $svgwidth, $svgheight;
-	$r = (int) '09'; //avoid getting circles outside of viewbox
 
+	$r = floor(rand(0,$svgwidth/2)); //avoid getting circles outside of viewbox
 	$x = floor(rand($r, $svgwidth-$r)); //avoid getting a range 0..0 for rand function
 	$y = floor(rand($r,$svgheight-$r));
 
-	$red = (int) floor(rand(0,255));
-	$blue = (int) floor(rand(0,255));
-	$green = (int) floor(rand(0,255));
+	$red = (int) '084';
+	$blue = (int) '08';
+	$green = (int) '160';
 
 	$color = 'rgb('.$red.','.$blue.','.$green.')';
 	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\"/>\n";
