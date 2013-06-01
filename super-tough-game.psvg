@@ -46,6 +46,7 @@ function do_sq(){
 	$blue = floor(rand(0,255));
 	$green = floor(rand(0,255));
 	$color = "rgb(".$red.",".$green.",".$blue.")";
+	
 	print "\t<rect x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
 }
 
@@ -60,6 +61,7 @@ function do_cir(){
 	$blue = floor(rand(0,255));
 	$green = floor(rand(0,255));
 	$color = "rgb(".$red.",".$green.",".$blue.")";
+
 	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\"/>\n";
 }
 
@@ -73,10 +75,7 @@ function do_el(){
 	$blue = floor(rand(0,255));
 	$green = floor(rand(0,255));
 	$color = "rgb(".$red.",".$green.",".$blue.")";
-	// print "\t<rect x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
 
-	//cx, cy placement
-	// rx, ry radius 
 	print "\t<ellipse cx=\"$cx\" cy=\"$cy\" rx=\"$rx\" ry=\"$ry\" style=\"fill: $color;\" />\n";
 } ?>
 </svg>
