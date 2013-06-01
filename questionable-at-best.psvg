@@ -17,6 +17,9 @@ xmlns="http://www.w3.org/2000/svg">
   <script type="application/ecmascript">//<![CDATA[
       console.log('33 48.902 / 084 09.100');
   //]]> </script>
+   <script type="text/javascript">//<![CDATA[
+  	console.log('fucksickls');
+  //]]> </script>
 <?php 
 
 srand((double) microtime() * 1000000); //initalizing random generator
