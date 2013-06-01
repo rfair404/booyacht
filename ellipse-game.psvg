@@ -17,7 +17,7 @@ $svgheight=500;
 
 srand((double) microtime() * 1000000); //initalizing random generator
 $n = rand(0, 4);
-$nw = rand(5, 9);
+$w = rand(5, 9);
 
 for ($i = 0; $i < 10; $i+=1) {
 
