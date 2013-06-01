@@ -62,7 +62,9 @@ function do_n($n){
 	$x = floor(rand(0,$svgwidth-$width));
 	$y = floor(rand(0,$svgheight-$height));
 	if(is_float($n/2)) {
-		$x = $y; $y = $x;
+		$ox = $x;
+		$x = $y; 
+		$y = $ox;
 	}
 
 	$red = (int) floor(rand(0,255));
@@ -85,7 +87,9 @@ function do_w($w){
 	$y = floor(rand(0,$svgheight-$height));
 	//reverse it once and a while
 	if(is_float($w/2)) {
-		$x = $y; $y = $x;
+		$ox = $x;
+		$x = $y; 
+		$y = $ox;
 	}
 
 	$red = (int) floor(rand(0,255));
