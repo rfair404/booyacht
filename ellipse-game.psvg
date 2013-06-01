@@ -65,7 +65,7 @@ function do_coords(){
 	$color = 'rgb('.$red.','.$blue.','.$green.')';
 	// print "\t<rect x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
 
-	print "\t<ellipse cx=\"48\" cy=\"084\" rx=\"205\" ry=\"160\" data-attr-coords\=\"true\" style=\"fill: blue;\" />\n";
+	print "\t<ellipse cx=\"48\" cy=\"084\" rx=\"205\" ry=\"160\" data-attr-coords=\"true\" style=\"fill: blue;\" />\n";
 
 } ?>
 </svg>
