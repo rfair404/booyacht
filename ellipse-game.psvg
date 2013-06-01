@@ -13,5 +13,57 @@ $svgheight=500;
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="<?php echo $svgwidth;?>" height="<?php echo $svgheight; ?>" xmlns="http://www.w3.org/2000/svg" version="1.1">
 <desc>Good luck solving this Geocache Puzzle</desc>
-<ellipse cx="48" cy="084" rx="205" ry="160" style="fill: blue;" />
+
+<?php 
+
+srand((double) microtime() * 1000000); //initalizing random generator
+$cords = rand(0, 9);
+
+
+for ($i = 0; $i < 10; $i+=1) {
+
+	switch ($i){
+		case $cords:
+			do_cords();
+			break;
+		default:
+			do_random();
+			break;
+	}
+
+}
+
+function do_random(){
+	global $svgwidth, $svgheight;
+
+	$x = floor(rand(0,$svgwidth-1)); //avoid getting a range 0..0 for rand function
+	$y = floor(rand(0,$svgheight-1));
+	$width = floor(rand(0,$svgwidth-$x)); //avoid getting rect outside of viewbox
+	$height = floor(rand(0,$svgheight-$y));
+	$red = floor(rand(0,255));
+	$blue = floor(rand(0,255));
+	$green = floor(rand(0,255));
+	$color = "rgb(".$red.",".$green.",".$blue.")";
+	print "\t<rect x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
+}
+
+function do_cords(){
+// set up the "north" rectangle
+	global $svgwidth, $svgheight;
+	$width = (int) '48';//must be less than the svg width, 500
+	$height = (int) '011';//must be less than the svg height, 500
+	$x = floor(rand(0,$svgwidth-$width));
+	$y = floor(rand(0,$svgheight-$height));
+	$red = (int) floor(rand(0,255));
+	$blue = (int) floor(rand(0,255));
+	$green = (int) floor(rand(0,255));
+
+	$color = 'rgb('.$red.','.$blue.','.$green.')';
+	print "\t<rect x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
+
+	print "\t<ellipse cx=\"48\" cy=\"084\" rx=\"205\" ry=\"160\" style=\"fill: blue;\" />\n";
+
+
+
+} ?>
 </svg>
