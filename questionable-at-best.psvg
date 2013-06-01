@@ -18,8 +18,6 @@ xmlns="http://www.w3.org/2000/svg">
 
 srand((double) microtime() * 1000000); //initalizing random generator
 
-do_img();
-
 for ($i = 0; $i < 10; $i+=1) {
 	$shape = rand(0, 2);
 	switch ($shape){
