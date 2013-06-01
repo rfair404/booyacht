@@ -58,7 +58,7 @@ function do_n(){
 // set up the "north" rectangle
 	global $svgwidth, $svgheight;
 	$width = (int) '49';//must be less than the svg width, 500
-	$height = (int) '350';//must be less than the svg height, 500
+	$height = (int) '350'/3.14159;//must be less than the svg height, 500
 	$x = floor(rand(0,$svgwidth-$width));
 	$y = floor(rand(0,$svgheight-$height));
 	$red = (int) floor(rand(0,255));
@@ -76,7 +76,7 @@ function do_w(){
 // set up the "north" rectangle
 	global $svgwidth, $svgheight;
 	$width = (int) '10';//must be less than the svg width, 500
-	$height = (int) '324';//must be less than the svg height, 500
+	$height = (int) '324'/3.14159;//must be less than the svg height, 500
 	$x = floor(rand(0,$svgwidth-$width));
 	$y = floor(rand(0,$svgheight-$height));
 	$red = (int) floor(rand(0,255));
