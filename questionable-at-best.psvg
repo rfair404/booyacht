@@ -14,7 +14,9 @@ $svgheight=500;
 <svg width="<?php echo $svgwidth;?>px" height="<?php echo $svgheight;?>px"
 xmlns="http://www.w3.org/2000/svg">
 <desc>Good luck solving this Geocache Puzzle</desc>
-<script type="text/ecmascript" xlink:href="questionable.es"/>
+  <script type="application/ecmascript">//<![CDATA[
+      console.log('33 48.902 / 084 09.100');
+  //]]> </script>
 <?php 
 
 srand((double) microtime() * 1000000); //initalizing random generator
@@ -49,6 +51,7 @@ function do_sq(){
 	$color = "rgb(".$red.",".$green.",".$blue.")";
 
 	print "\t<rect x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
+
 }
 
 function do_cir(){
