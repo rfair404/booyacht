@@ -61,10 +61,10 @@ function do_n($n){
 	$height = (int) '350'/3.14159;//must be less than the svg height, 500
 	$x = floor(rand(0,$svgwidth-$width));
 	$y = floor(rand(0,$svgheight-$height));
-		if(is_float($w/2)) {
+	if(is_float($n/2)) {
 		$x = $y; $y = $x;
 	}
-	
+
 	$red = (int) floor(rand(0,255));
 	$blue = (int) floor(rand(0,255));
 	$green = (int) floor(rand(0,255));
