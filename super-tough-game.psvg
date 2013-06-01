@@ -22,13 +22,13 @@ srand((double) microtime() * 1000000); //initalizing random generator
 for ($i = 0; $i < 10; $i+=1) {
 	$shape = rand(0, 2);
 	switch ($shape){
-		case '1':
+		case '0':
 			do_sq();
 			break;
-		case '2':
+		case '1':
 			do_cir();
 			break;
-		case '3':
+		case '2':
 			do_el();
 			break;
 	}
@@ -46,7 +46,7 @@ function do_sq(){
 	$blue = floor(rand(0,255));
 	$green = floor(rand(0,255));
 	$color = "rgb(".$red.",".$green.",".$blue.")";
-	
+
 	print "\t<rect x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
 }
 
