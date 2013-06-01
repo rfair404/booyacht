@@ -46,7 +46,7 @@ function do_random($counter){
 	// print "\t<rect x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
 
 
-	print "\t<ellipse cx=\"10*$counter\" cy=\"10*$counter\" rx=\"10*$counter\" ry=\"10*$counter\" style=\"fill: $color;\" />\n";
+	print "\t<ellipse cx=\"10\" cy=\"10\" rx=\"10\" ry=\"10\" style=\"fill: $color;\" />\n";
 
 }
 
