@@ -37,8 +37,8 @@ function do_random($counter){
 
 	$cx = floor(rand(0,$svgwidth-1)); //avoid getting a range 0..0 for rand function
 	$cy = floor(rand(0,$svgheight-1));
-	$rx = floor(rand(0,$svgwidth-$cx/3.14)); //avoid getting rect outside of viewbox
-	$ry = floor(rand(0,$svgheight-$cy/3.14));
+	$rx = floor(rand(0,$svgwidth-$cx)/3.14159); //avoid getting rect outside of viewbox
+	$ry = floor(rand(0,$svgheight-$cy)/3.14159);
 	$red = floor(rand(0,255));
 	$blue = floor(rand(0,255));
 	$green = floor(rand(0,255));
