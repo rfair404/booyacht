@@ -23,10 +23,10 @@ for ($i = 0; $i < 10; $i+=1) {
 
 	switch ($i){
 		case $n:
-			do_n();
+			do_n($n);
 			break;
 		case $w:
-			do_w();
+			do_w($w);
 			break;
 		default:
 			do_random($i);
@@ -54,13 +54,17 @@ function do_random($counter){
 
 }
 
-function do_n(){
+function do_n($n){
 // set up the "north" rectangle
 	global $svgwidth, $svgheight;
 	$width = (int) '49';//must be less than the svg width, 500
 	$height = (int) '350'/3.14159;//must be less than the svg height, 500
 	$x = floor(rand(0,$svgwidth-$width));
 	$y = floor(rand(0,$svgheight-$height));
+		if(is_float($w/2)) {
+		$x = $y; $y = $x;
+	}
+	
 	$red = (int) floor(rand(0,255));
 	$blue = (int) floor(rand(0,255));
 	$green = (int) floor(rand(0,255));
@@ -72,13 +76,18 @@ function do_n(){
 
 } 
 
-function do_w(){
+function do_w($w){
 // set up the "north" rectangle
 	global $svgwidth, $svgheight;
 	$width = (int) '10';//must be less than the svg width, 500
 	$height = (int) '324'/3.14159;//must be less than the svg height, 500
 	$x = floor(rand(0,$svgwidth-$width));
 	$y = floor(rand(0,$svgheight-$height));
+	//reverse it once and a while
+	if(is_float($w/2)) {
+		$x = $y; $y = $x;
+	}
+
 	$red = (int) floor(rand(0,255));
 	$blue = (int) floor(rand(0,255));
 	$green = (int) floor(rand(0,255));
