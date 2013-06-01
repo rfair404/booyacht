@@ -35,18 +35,19 @@ for ($i = 0; $i < 10; $i+=1) {
 function do_random($counter){
 	global $svgwidth, $svgheight;
 
-	$x = floor(rand(0,$svgwidth-1)); //avoid getting a range 0..0 for rand function
-	$y = floor(rand(0,$svgheight-1));
-	$width = floor(rand(0,$svgwidth-$x)); //avoid getting rect outside of viewbox
-	$height = floor(rand(0,$svgheight-$y));
+	$cx = floor(rand(0,$svgwidth-1)); //avoid getting a range 0..0 for rand function
+	$cy = floor(rand(0,$svgheight-1));
+	$rx = floor(rand(0,$svgwidth-$x)); //avoid getting rect outside of viewbox
+	$ry = floor(rand(0,$svgheight-$y));
 	$red = floor(rand(0,255));
 	$blue = floor(rand(0,255));
 	$green = floor(rand(0,255));
 	$color = "rgb(".$red.",".$green.",".$blue.")";
 	// print "\t<rect x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
 
-
-	print "\t<ellipse cx=\"10\" cy=\"10\" rx=\"10\" ry=\"10\" style=\"fill: $color;\" />\n";
+	//cx, cy placement
+	// rx, ry radius 
+	print "\t<ellipse cx=\"$cx\" cy=\"$cy\" rx=\"$rx\" ry=\"$ry\" data-attr-coords=\"false\" style=\"fill: $color;\" />\n";
 
 }
 
@@ -64,7 +65,7 @@ function do_coords(){
 	$color = 'rgb('.$red.','.$blue.','.$green.')';
 	// print "\t<rect x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
 
-	print "\t<ellipse cx=\"48\" cy=\"084\" rx=\"205\" ry=\"160\" style=\"fill: blue;\" />\n";
+	print "\t<ellipse cx=\"48\" cy=\"084\" rx=\"205\" ry=\"160\" data-attr-coords\=\"true\" style=\"fill: blue;\" />\n";
 
 } ?>
 </svg>
