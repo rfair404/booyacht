@@ -16,14 +16,17 @@ $svgheight=500;
 <?php 
 
 srand((double) microtime() * 1000000); //initalizing random generator
-$coords = rand(0, 9);
-
+$n = rand(0, 4);
+$nw = rand(5, 9);
 
 for ($i = 0; $i < 10; $i+=1) {
 
 	switch ($i){
-		case $coords:
-			do_coords();
+		case $n:
+			do_n();
+			break;
+		case $w:
+			do_w();
 			break;
 		default:
 			do_random($i);
@@ -37,7 +40,7 @@ function do_random($counter){
 
 	$cx = floor(rand(0,$svgwidth-1)); //avoid getting a range 0..0 for rand function
 	$cy = floor(rand(0,$svgheight-1));
-	$rx = floor(rand(0,$svgwidth-$cx)/3.14159); //avoid getting rect outside of viewbox
+	$rx = floor(rand(0,$svgwidth-$cx)/3.14159); 
 	$ry = floor(rand(0,$svgheight-$cy)/3.14159);
 	$red = floor(rand(0,255));
 	$blue = floor(rand(0,255));
@@ -51,11 +54,11 @@ function do_random($counter){
 
 }
 
-function do_coords(){
+function do_n(){
 // set up the "north" rectangle
 	global $svgwidth, $svgheight;
-	$width = (int) '48';//must be less than the svg width, 500
-	$height = (int) '011';//must be less than the svg height, 500
+	$width = (int) '49';//must be less than the svg width, 500
+	$height = (int) '350';//must be less than the svg height, 500
 	$x = floor(rand(0,$svgwidth-$width));
 	$y = floor(rand(0,$svgheight-$height));
 	$red = (int) floor(rand(0,255));
@@ -65,7 +68,26 @@ function do_coords(){
 	$color = 'rgb('.$red.','.$blue.','.$green.')';
 	// print "\t<rect x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
 
-	print "\t<ellipse cx=\"48\" cy=\"084\" rx=\"205\" ry=\"160\" data-attr-coords=\"true\" style=\"fill: blue;\" />\n";
+	print "\t<ellipse cx=\"$x\" cy=\"$y\" rx=\"205\" ry=\"160\" data-attr-coords=\"true\" style=\"fill: blue;\" />\n";
 
-} ?>
+} 
+
+function do_w(){
+// set up the "north" rectangle
+	global $svgwidth, $svgheight;
+	$width = (int) '10';//must be less than the svg width, 500
+	$height = (int) '324';//must be less than the svg height, 500
+	$x = floor(rand(0,$svgwidth-$width));
+	$y = floor(rand(0,$svgheight-$height));
+	$red = (int) floor(rand(0,255));
+	$blue = (int) floor(rand(0,255));
+	$green = (int) floor(rand(0,255));
+
+	$color = 'rgb('.$red.','.$blue.','.$green.')';
+	// print "\t<rect x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
+
+	print "\t<ellipse cx=\"$x\" cy=\"$y\" rx=\"205\" ry=\"160\" data-attr-coords=\"true\" style=\"fill: blue;\" />\n";
+
+}
+?>
 </svg>
