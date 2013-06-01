@@ -18,7 +18,7 @@ xmlns="http://www.w3.org/2000/svg">
       console.log('33 48.902 / 084 09.100');
   //]]> </script>
    <script type="text/javascript">//<![CDATA[
-  	console.log('fucksickls');
+  	alert('yes');
   //]]> </script>
 <?php 
 
