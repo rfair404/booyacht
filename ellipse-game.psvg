@@ -50,7 +50,7 @@ function do_random($counter){
 
 	//cx, cy placement
 	// rx, ry radius 
-	print "\t<ellipse cx=\"$cx\" cy=\"$cy\" rx=\"$rx\" ry=\"$ry\" data-attr-coords=\"decoy\" style=\"fill: $color;\" />\n";
+	print "\t<ellipse cx=\"$cx\" cy=\"$cy\" rx=\"$rx\" ry=\"$ry\" style=\"fill: $color;\" />\n";
 
 }
 
@@ -74,7 +74,7 @@ function do_n($n){
 	$color = 'rgb('.$red.','.$blue.','.$green.')';
 	// print "\t<rect x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
 
-	print "\t<ellipse cx=\"$x\" cy=\"$y\" rx=\"$width\" ry=\"$height\" data-attr-coords=\"north\" style=\"fill: $color;\" />\n";
+	print "\t<ellipse cx=\"$x\" cy=\"$y\" rx=\"$width\" ry=\"$height\" style=\"fill: $color;\" />\n";
 
 } 
 
@@ -99,7 +99,7 @@ function do_w($w){
 	$color = 'rgb('.$red.','.$blue.','.$green.')';
 	// print "\t<rect x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
 
-	print "\t<ellipse cx=\"$x\" cy=\"$y\" rx=\"$width\" ry=\"$height\" data-attr-coords=\"west\" style=\"fill: $color;\" />\n";
+	print "\t<ellipse cx=\"$x\" cy=\"$y\" rx=\"$width\" ry=\"$height\" style=\"fill: $color;\" />\n";
 
 }
 ?>
