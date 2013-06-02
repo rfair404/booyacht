@@ -52,8 +52,8 @@ function do_random(){
 function do_north(){
 // set up the "north" rectangle
 	global $svgwidth, $svgheight;
-	$width = (int) '48';
-	$height = (int) '011';
+	$width = (int) '48';//must be less than the svg width, 500
+	$height = (int) '011';//must be less than the svg height, 500
 	$x = floor(rand(0,$svgwidth-$width));
 	$y = floor(rand(0,$svgheight-$height));
 	$red = (int) floor(rand(0,255));
