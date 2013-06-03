@@ -19,6 +19,10 @@ srand((double) microtime() * 1000000); //initalizing random generator
 $north = rand(0, 4);
 $west = rand(5, 9);
 
+$stx = floor(rand(0,$svgwidth-1)); //avoid getting a range 0..0 for rand function
+$sty = floor(rand(0,$svgheight-1));
+
+
 for ($i = 0; $i < 10; $i+=1) {
 
   switch ($i){
@@ -35,15 +39,32 @@ for ($i = 0; $i < 10; $i+=1) {
 
 }
 
-function do_north(){ ?>
-<path id="north" d="M 100 350 q 150 -300 300 25" stroke="red"
-  stroke-width="3" fill="none" />
+function do_north(){ 
+  global $stx, $sty;  
+  $red = floor(rand(0,255));
+  $blue = floor(rand(0,255));
+  $green = floor(rand(0,255));
+  $color = "rgb(".$red.",".$green.",".$blue.")";
+
+  print "\t<path id=\"west\" d=\"M $stx $sty l 100 100\" style=\"fill:$color;\"/>\n";
+    ?>
+<!-- <path id="north" d="M 100 350 q 150 -300 300 25" stroke="red"
+  stroke-width="3" fill="none" /> -->
 <?php } 
-function do_west(){ ?>
-<path id="west" d="M 100 350 q -150 300 200 75" stroke="blue"
-  stroke-width="3" fill="none" />
+function do_west(){ 
+  global $stx, $sty; 
+  $red = floor(rand(0,255));
+  $blue = floor(rand(0,255));
+  $green = floor(rand(0,255));
+  $color = "rgb(".$red.",".$green.",".$blue.")";
+
+  print "\t<path id=\"west\" d=\"M $stx $sty l -100 -100\" style=\"fill:$color;\"/>\n";
+    ?>
+<!-- <path id="west" d="M 100 350 q -150 300 200 75" stroke="blue"
+  stroke-width="3" fill="none" /> -->
 <?php } 
-function do_random(){ ?>
+function do_random(){ 
+  global $stx, $sty; ?>
 <!--   <path id="lineBC" d="M 250 50 l 150 300" stroke="red"
   stroke-width="3" fill="none" /> -->
   <!-- <path d="M 175 200 l 150 0" stroke="green" stroke-width="3"
