@@ -19,7 +19,9 @@ srand((double) microtime() * 1000000); //initalizing random generator
 $north = rand(0, 4);
 $west = rand(5, 9);
 ?>
-<path id="lineAB" d="M 100 350 q 150 -300 300 25" stroke="red"
+<path id="north" d="M 100 350 q 150 -300 300 25" stroke="red"
+  stroke-width="3" fill="none" />
+<path id="west" d="M 100 350 q 150 -300 300 25" stroke="red"
   stroke-width="3" fill="none" />
 <!--   <path id="lineBC" d="M 250 50 l 150 300" stroke="red"
   stroke-width="3" fill="none" /> -->
