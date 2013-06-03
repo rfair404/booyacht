@@ -1,7 +1,24 @@
-body{
-	background: white;
-}
-.wide{
-	width: 80%;
-	padding: 10%;
-}
+	
+	body{
+		background: white;
+		padding: 2rem 10rem;
+	}
+
+	.wide{
+		width: 100%;
+		padding: 0 10%;
+	}
+	.content{
+		width: 65%;
+		float: left;
+	}
+	.side{
+		width: 30%;
+		margin-left: 5%;
+	}
+	figure.profile-image{
+		padding: 0;
+		margin: 0;
+		float: left;
+		margin-right: 1rem;
+	}
