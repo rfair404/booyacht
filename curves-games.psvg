@@ -46,7 +46,7 @@ function do_north(){
   $green = floor(rand(0,255));
   $color = "rgb(".$red.",".$green.",".$blue.")";
 
-  print "\t<path id=\"north\" d=\"M $stx $sty l 100 100\" stroke=\"$color;\"/>\n";
+  print "\t<path id=\"north\" d=\"M $stx $sty l 100 100\" stroke=\"$color;\"  stroke-width=\"3\" fill=\"none\"/>\n";
     ?>
 <!-- <path id="north" d="M 100 350 q 150 -300 300 25" stroke="red"
   stroke-width="3" fill="none" /> -->
