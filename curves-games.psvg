@@ -40,7 +40,7 @@ function do_north(){ ?>
   stroke-width="3" fill="none" />
 <?php } 
 function do_west(){ ?>
-<path id="west" d="M 100 350 q 150 -300 300 25" stroke="red"
+<path id="west" d="M 100 350 q -150 300 200 75" stroke="blue"
   stroke-width="3" fill="none" />
 <?php } 
 function do_random(){ ?>
