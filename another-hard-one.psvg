@@ -1,12 +1,11 @@
 <?php
 header("Content-type: image/svg+xml");
-setcookie('north.coordinates', '33_42.105', time()+60*60*24*30);
-setcookie('west.coordinates', '084_09.898', time()+60*60*24*30);
 //set headers to NOT cache a page
 header("Cache-Control: no-cache, must-revalidate"); //HTTP 1.1
+header("Cache-Coords: N 33 42.105 W 084 09.898");//the actual coords for this puzzle
 header("Pragma: no-cache"); //HTTP 1.0
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
-header("Cache-Coords: N 33 42.105 W 084 09.898");
+
 
 echo '<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>';
 $svgwidth=500;
@@ -25,13 +24,13 @@ for ($i = 0; $i < 10; $i+=1) {
 	switch ($shape){
 		case '0':
 			do_sq();
-			break;
+		break;
 		case '1':
 			do_cir();
-			break;
+		break;
 		case '2':
 			do_el();
-			break;
+		break;
 	}
 }
 
