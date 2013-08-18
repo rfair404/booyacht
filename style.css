@@ -1,24 +1,76 @@
-	
-	body{
-		background: white;
-		padding: 2rem 10rem;
-	}
+body{
+	padding: 25px;
+	margin: 0;
+	background: transparent url("rainbow.png") repeat-x fixed;
+	background-size: 50%;
+}
+#top, #main, #bottom{
+	width: 960px;
+	margin: 0 auto;
+	display: block;
+	clear: both;
+	box-sizing: border-box;
+}
+.main-navigation{
+	float: left;
+	width: 100%;
+	background: red;
+	padding: 10px 0;
+}
+.main-navigation ul{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+}
+.main-navigation li{
+	display: inline;
+	padding: 10px;
+	background: red;
+}
+.main-navigation li:hover{
+	background: yellow;
+}
+.main-navigation li a{
+	line-height: 14px;
+	color: white;
+}
+.main-navigation li:hover a{
+	color: black;
+}
+.main-navigation .active{
+	font-weight: bold;
+	color: black;
+}
 
-	.wide{
-		width: 100%;
-		padding: 0 10%;
-	}
-	.content{
-		width: 65%;
-		float: left;
-	}
-	.side{
-		width: 30%;
-		margin-left: 5%;
-	}
-	figure.profile-image{
-		padding: 0;
-		margin: 0;
-		float: left;
-		margin-right: 1rem;
-	}
+/*second column*/
+#main .wrapper{
+	float: left;
+	background: white;
+	padding: 5%;
+	width: 90%;
+}
+#main .biography{
+	width: 60%;
+	float: left;
+}
+#main .headshot{
+	width: 30%;
+	float: left;
+	margin: 0 10px 0 0;
+	padding: 10px;
+	border: 1px solid whitesmoke;
+}
+#main .headshot img{
+	max-width: 100%;
+}
+#main .projects{
+	width: 40%;
+	float: left;
+}
+#bottom{
+	background: purple;
+	color: yellow;
+	padding: 10px 10px 5px;
+	text-align: right;
+}
