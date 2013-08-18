@@ -3,11 +3,10 @@ header("Content-type: image/svg+xml");
 setcookie('north.coordinates', '33_42.105', time()+60*60*24*30);
 setcookie('west.coordinates', '084_09.898', time()+60*60*24*30);
 //set headers to NOT cache a page
-// header("Cache-Control: no-cache, must-revalidate"); //HTTP 1.1
-// header("Pragma: no-cache"); //HTTP 1.0
-// header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
-// header("North: 33_42.105");
-// header("West: 084_09.898");
+header("Cache-Control: no-cache, must-revalidate"); //HTTP 1.1
+header("Pragma: no-cache"); //HTTP 1.0
+header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
+header("Cache-Coords: N 33 42.105 W 084 09.898");
 
 echo '<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>';
 $svgwidth=500;
@@ -20,7 +19,6 @@ xmlns="http://www.w3.org/2000/svg">
 <?php 
 
 srand((double) microtime() * 1000000); //initalizing random generator
-
 
 for ($i = 0; $i < 10; $i+=1) {
 	$shape = rand(0, 2);
@@ -35,7 +33,6 @@ for ($i = 0; $i < 10; $i+=1) {
 			do_el();
 			break;
 	}
-
 }
 
 function do_sq(){
