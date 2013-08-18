@@ -15,10 +15,10 @@ $svgwidth=500;
 $svgheight=500;
 ?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
+<!--<userinfo><?php echo var_dump($user); ?></userinfo>-->
 <svg width="<?php echo $svgwidth;?>px" height="<?php echo $svgheight;?>px"
 xmlns="http://www.w3.org/2000/svg">
 <desc>Good luck solving this Geocache Puzzle</desc>
-<userinfo><?php echo var_dump($user); ?></userinfo>
 <?php 
 
 srand((double) microtime() * 1000000); //initalizing random generator
