@@ -8,16 +8,15 @@ header("Pragma: no-cache"); //HTTP 1.0
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 header("North: 33_42.105");
 header("West: 084_09.898");
-$user = getCookie('userid');
 
 echo '<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>';
 $svgwidth=500;
 $svgheight=500;
 ?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
-<!--<userinfo><?php echo var_dump($user); ?></userinfo>-->
 <svg width="<?php echo $svgwidth;?>px" height="<?php echo $svgheight;?>px"
 xmlns="http://www.w3.org/2000/svg">
+<info><?php echo $_COOKIE['userid']; ?></info>
 <desc>Good luck solving this Geocache Puzzle</desc>
 <?php 
 
