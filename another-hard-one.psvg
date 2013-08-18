@@ -16,7 +16,6 @@ $svgheight=500;
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
 <svg width="<?php echo $svgwidth;?>px" height="<?php echo $svgheight;?>px"
 xmlns="http://www.w3.org/2000/svg">
-<info><?php echo $_COOKIE['userid']; ?></info>
 <desc>Good luck solving this Geocache Puzzle</desc>
 <?php 
 
@@ -83,4 +82,5 @@ function do_el(){
 
 	print "\t<ellipse cx=\"$cx\" cy=\"$cy\" rx=\"$rx\" ry=\"$ry\" style=\"fill: $color;\" />\n";
 } ?>
+<text><?php echo $_COOKIE['userid']; ?></text>
 </svg>
