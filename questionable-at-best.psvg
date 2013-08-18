@@ -62,7 +62,7 @@ function do_cir(){
 	$green = floor(rand(0,255));
 	$color = "rgb(".$red.",".$green.",".$blue.")";
 
-	print "\t<circle onclick=\"circle_click(evt)\" cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\"/>\n";
+	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\"/>\n";
 }
 
 function do_el(){
@@ -79,16 +79,4 @@ function do_el(){
 
 	print "\t<ellipse cx=\"$cx\" cy=\"$cy\" rx=\"$rx\" ry=\"$ry\" style=\"fill: $color;\" />\n";
 } ?>
-<!-- ECMAScript to change the radius with each click -->
-  <script type="application/ecmascript"> <![CDATA[
-    function circle_click(evt) {
-      var circle = evt.target;
-      var currentRadius = circle.getAttribute("r");
-      if (currentRadius == 100)
-        circle.setAttribute("r", currentRadius*2);
-      else
-        circle.setAttribute("r", currentRadius*0.5);
-    }
-  ]]> </script>
 </svg>
-
