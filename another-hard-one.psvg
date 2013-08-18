@@ -82,5 +82,5 @@ function do_el(){
 
 	print "\t<ellipse cx=\"$cx\" cy=\"$cy\" rx=\"$rx\" ry=\"$ry\" style=\"fill: $color;\" />\n";
 } ?>
-<text><?php echo $_COOKIE['userid']; ?></text>
+<text x="250" y="250">Hello <?php echo $_COOKIE['userid']; ?></text>
 </svg>
