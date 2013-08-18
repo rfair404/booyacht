@@ -1,0 +1,82 @@
+<?php
+header("Content-type: image/svg+xml");
+setcookie('north.coordinates', '33_42.105' );
+setcookie('west.coordinates', '084_09.898' );
+//set headers to NOT cache a page
+header("Cache-Control: no-cache, must-revalidate"); //HTTP 1.1
+header("Pragma: no-cache"); //HTTP 1.0
+header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
+
+
+echo '<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>';
+$svgwidth=500;
+$svgheight=500;
+?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
+<svg width="<?php echo $svgwidth;?>px" height="<?php echo $svgheight;?>px"
+xmlns="http://www.w3.org/2000/svg">
+<desc>Good luck solving this Geocache Puzzle</desc>
+<?php 
+
+srand((double) microtime() * 1000000); //initalizing random generator
+
+for ($i = 0; $i < 10; $i+=1) {
+	$shape = rand(0, 2);
+	switch ($shape){
+		case '0':
+			do_sq();
+		break;
+		case '1':
+			do_cir();
+		break;
+		case '2':
+			do_el();
+		break;
+	}
+}
+
+function do_sq(){
+	global $svgwidth, $svgheight;
+
+	$x = floor(rand(0,$svgwidth-1)); //avoid getting a range 0..0 for rand function
+	$y = floor(rand(0,$svgheight-1));
+	$width = floor(rand(0,$svgwidth-$x)); //avoid getting rect outside of viewbox
+	$height = floor(rand(0,$svgheight-$y));
+	$red = floor(rand(0,255));
+	$blue = floor(rand(0,255));
+	$green = floor(rand(0,255));
+	$color = "rgb(".$red.",".$green.",".$blue.")";
+
+	print "\t<rect x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
+}
+
+function do_cir(){
+	global $svgwidth, $svgheight;
+
+	$r = floor(rand(0,$svgwidth/2)); //avoid getting circles outside of viewbox
+	$x = floor(rand($r, $svgwidth-$r)); //avoid getting a range 0..0 for rand function
+	$y = floor(rand($r,$svgheight-$r));
+
+	$red = floor(rand(0,255));
+	$blue = floor(rand(0,255));
+	$green = floor(rand(0,255));
+	$color = "rgb(".$red.",".$green.",".$blue.")";
+
+	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\"/>\n";
+}
+
+function do_el(){
+	global $svgwidth, $svgheight;
+
+	$cx = floor(rand(0,$svgwidth-1)); //avoid getting a range 0..0 for rand function
+	$cy = floor(rand(0,$svgheight-1));
+	$rx = floor(rand(0,$svgwidth-$cx)); 
+	$ry = floor(rand(0,$svgheight-$cy));
+	$red = floor(rand(0,255));
+	$blue = floor(rand(0,255));
+	$green = floor(rand(0,255));
+	$color = "rgb(".$red.",".$green.",".$blue.")";
+
+	print "\t<ellipse cx=\"$cx\" cy=\"$cy\" rx=\"$rx\" ry=\"$ry\" style=\"fill: $color;\" />\n";
+} ?>
+</svg>
