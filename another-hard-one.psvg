@@ -3,11 +3,11 @@ header("Content-type: image/svg+xml");
 setcookie('north.coordinates', '33_42.105', time()+60*60*24*30);
 setcookie('west.coordinates', '084_09.898', time()+60*60*24*30);
 //set headers to NOT cache a page
-header("Cache-Control: no-cache, must-revalidate"); //HTTP 1.1
-header("Pragma: no-cache"); //HTTP 1.0
-header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
-header("North: 33_42.105");
-header("West: 084_09.898");
+// header("Cache-Control: no-cache, must-revalidate"); //HTTP 1.1
+// header("Pragma: no-cache"); //HTTP 1.0
+// header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
+// header("North: 33_42.105");
+// header("West: 084_09.898");
 
 echo '<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>';
 $svgwidth=500;
@@ -82,5 +82,4 @@ function do_el(){
 
 	print "\t<ellipse cx=\"$cx\" cy=\"$cy\" rx=\"$rx\" ry=\"$ry\" style=\"fill: $color;\" />\n";
 } ?>
-<text x="250" y="250">Hello <?php echo $_COOKIE['userid']; ?></text>
 </svg>
