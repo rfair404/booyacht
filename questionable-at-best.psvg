@@ -79,5 +79,5 @@ function do_el(){
 
 	print "\t<ellipse cx=\"$cx\" cy=\"$cy\" rx=\"$rx\" ry=\"$ry\" style=\"fill: $color;\" />\n";
 } ?>
-<script type="text/ecmascript" xlink:href="script.es"/>
+<script type="text/ecmascript" xlink:href="questionable.es"/>
 </svg>
