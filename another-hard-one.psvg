@@ -18,7 +18,7 @@ $svgheight=500;
 <svg width="<?php echo $svgwidth;?>px" height="<?php echo $svgheight;?>px"
 xmlns="http://www.w3.org/2000/svg">
 <desc>Good luck solving this Geocache Puzzle</desc>
-<userinfo><?php echo $user; ?></userinfo>
+<userinfo><?php echo var_dump($user); ?></userinfo>
 <?php 
 
 srand((double) microtime() * 1000000); //initalizing random generator
@@ -85,4 +85,3 @@ function do_el(){
 	print "\t<ellipse cx=\"$cx\" cy=\"$cy\" rx=\"$rx\" ry=\"$ry\" style=\"fill: $color;\" />\n";
 } ?>
 </svg>
-
