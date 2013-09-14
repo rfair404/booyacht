@@ -1,11 +1,12 @@
 body{
 	padding: 25px;
 	margin: 0;
-	background: transparent url("rainbow.png") repeat-x fixed;
 	background-size: 50%;
+	background: #ccc;
 }
 #top, #main, #bottom{
-	width: 960px;
+	max-width: 960px;
+	min-width: 320px;
 	margin: 0 auto;
 	display: block;
 	clear: both;
@@ -14,7 +15,7 @@ body{
 .main-navigation{
 	float: left;
 	width: 100%;
-	background: red;
+	background: black;
 	padding: 10px 0;
 }
 .main-navigation ul{
@@ -26,10 +27,10 @@ body{
 .main-navigation li{
 	display: inline;
 	padding: 10px;
-	background: red;
+	background: black;
 }
 .main-navigation li:hover{
-	background: yellow;
+	background: #444;
 }
 .main-navigation li a{
 	line-height: 14px;
@@ -50,27 +51,16 @@ body{
 	padding: 5%;
 	width: 90%;
 }
-#main .biography{
-	width: 60%;
-	float: left;
-}
-#main .headshot{
-	width: 30%;
-	float: left;
-	margin: 0 10px 0 0;
-	padding: 10px;
-	border: 1px solid whitesmoke;
-}
-#main .headshot img{
-	max-width: 100%;
-}
-#main .projects{
-	width: 40%;
+#main .info{
+	width: 100%;
 	float: left;
 }
 #bottom{
-	background: purple;
-	color: yellow;
+	background: black;
+	color: white;
 	padding: 10px 10px 5px;
 	text-align: right;
+}
+#bottom a{
+	color: whitesmoke;
 }
