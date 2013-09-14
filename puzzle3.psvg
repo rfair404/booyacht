@@ -7,13 +7,13 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 
 echo '<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>';
 $svgwidth=500;
-$svgheight=400;
+$svgheight=500;
 ?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/SVG/DTD/svg10.dtd">
 <svg width="<?php echo $svgwidth;?>px" height="<?php echo $svgheight;?>px"
 xmlns="http://www.w3.org/2000/svg">
 <desc>Good luck solving this Geocache Puzzle</desc>
-<?php 
+<?php
 
 srand((double) microtime() * 1000000); //initalizing random generator
 $north = rand(0, 4);

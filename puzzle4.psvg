@@ -2,7 +2,7 @@
 header("Content-type: image/svg+xml");
 //set headers to NOT cache a page
 header("Cache-Control: no-cache, must-revalidate"); //HTTP 1.1
-header("Cache-Coords: N 33 42.105 W 084 09.898");//the actual coords for this puzzle
+header("Cache-Coords: N 33° 49.802 W 084° 14.938");//the actual coords for this puzzle
 header("Pragma: no-cache"); //HTTP 1.0
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 
@@ -15,7 +15,7 @@ $svgheight=500;
 <svg width="<?php echo $svgwidth;?>px" height="<?php echo $svgheight;?>px"
 xmlns="http://www.w3.org/2000/svg">
 <desc>Good luck solving this Geocache Puzzle</desc>
-<?php 
+<?php
 
 srand((double) microtime() * 1000000); //initalizing random generator
 
@@ -69,7 +69,7 @@ function do_el(){
 
 	$cx = floor(rand(0,$svgwidth-1)); //avoid getting a range 0..0 for rand function
 	$cy = floor(rand(0,$svgheight-1));
-	$rx = floor(rand(0,$svgwidth-$cx)); 
+	$rx = floor(rand(0,$svgwidth-$cx));
 	$ry = floor(rand(0,$svgheight-$cy));
 	$red = floor(rand(0,255));
 	$blue = floor(rand(0,255));
