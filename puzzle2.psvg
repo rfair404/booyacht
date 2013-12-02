@@ -13,7 +13,7 @@ $svgheight=500;
 <svg width="<?php echo $svgwidth;?>px" height="<?php echo $svgheight;?>px"
 xmlns="http://www.w3.org/2000/svg">
 <desc>Good luck solving this Geocache Puzzle</desc>
-<?php 
+<?php
 
 srand((double) microtime() * 1000000); //initalizing random generator
 $north = rand(0, 4);
@@ -52,8 +52,8 @@ function do_random(){
 function do_north(){
 // set up the "north" rectangle
 	global $svgwidth, $svgheight;
-	$width = (int) '48';//must be less than the svg width, 500
-	$height = (int) '011';//must be less than the svg height, 500
+	$width = (int) '51';//must be less than the svg width, 500
+	$height = (int) '143';//must be less than the svg height, 500
 	$x = floor(rand(0,$svgwidth-$width));
 	$y = floor(rand(0,$svgheight-$height));
 	$red = (int) floor(rand(0,255));
@@ -67,8 +67,8 @@ function do_north(){
 function do_west(){
 	// set up the "west" rectangle
 	global $svgwidth, $svgheight;
-	$width = (int) '09';
-	$height = (int) '103';
+	$width = (int) '14';
+	$height = (int) '539';
 	$x = floor(rand(0,$svgwidth-$width));
 	$y = floor(rand(0,$svgheight-$height));
 
