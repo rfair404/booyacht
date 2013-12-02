@@ -41,6 +41,7 @@ function do_random(){
 
 	$x = floor(rand(0,$svgwidth-1)); //avoid getting a range 0..0 for rand function
 	$y = floor(rand(0,$svgheight-1));
+	$r = floor(rand(0,$svgwidth-$x));
 	$width = floor(rand(0,$svgwidth-$x)); //avoid getting rect outside of viewbox
 	$height = floor(rand(0,$svgheight-$y));
 	$red = floor(rand(0,255));
