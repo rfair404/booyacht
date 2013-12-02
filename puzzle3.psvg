@@ -1,4 +1,5 @@
 <?php
+// 2 random circles, width? height? are coords?
 header("Content-type: image/svg+xml");
 //set headers to NOT cache a page
 header("Cache-Control: no-cache, must-revalidate"); //HTTP 1.1
@@ -46,7 +47,9 @@ function do_random(){
 	$blue = floor(rand(0,255));
 	$green = floor(rand(0,255));
 	$color = "rgb(".$red.",".$green.",".$blue.")";
-	print "\t<circle x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
+	//print "\t<circle x=\"$x\" y=\"$y\" width=\"$width\" height=\"$height\" style=\"fill:$color;\"/>\n";
+	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\"/>\n";
+
 }
 
 function do_north(){
