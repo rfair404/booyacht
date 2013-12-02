@@ -60,6 +60,7 @@ function do_north(){
 	$height = (int) '092';
 	$x = floor(rand(0,$svgwidth-$width));
 	$y = floor(rand(0,$svgheight-$height));
+	$r = floor(rand(0,$svgwidth-$x));
 	$red = (int) floor(rand(0,255));
 	$blue = (int) floor(rand(0,255));
 	$green = (int) floor(rand(0,255));
@@ -75,7 +76,7 @@ function do_west(){
 	$height = (int) '030';
 	$x = floor(rand(0,$svgwidth-$width));
 	$y = floor(rand(0,$svgheight-$height));
-
+	$r = floor(rand(0,$svgwidth-$x));
 	$red = (int) floor(rand(0,255));
 	$blue = (int) floor(rand(0,255));
 	$green = (int) floor(rand(0,255));
