@@ -1,0 +1,40 @@
+body {
+  background: #333;
+}
+#main-wrap {
+  min-width: 480px;
+  max-width: 960px;
+  background: whitesmoke;
+  margin: 0 auto;
+}
+#primary-header {
+  min-height: 100px;
+}
+#middle-wrap {
+  float: left;
+}
+.full-width {
+  padding: 0 20px;
+}
+#main {
+  float: left;
+  width: 600px;
+  margin-right: 20px;
+}
+#main article {
+  box-shadow: 5px 5px 10px #555;
+  padding: 20px;
+  margin: 10px 0 30px;
+}
+#main h2 {
+  font-family: 'Della Respira', serif;
+}
+#sidebar {
+  float: left;
+  width: 300px;
+}
+#primary-footer {
+  min-height: 50px;
+  background: lightblue;
+  clear: both;
+}
