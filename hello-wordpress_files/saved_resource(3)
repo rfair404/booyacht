@@ -1,0 +1,21 @@
+body.page-id-58 figure.theme-img {
+	border:none!important;
+	background:none!important;
+	box-shadow:none!important;
+}
+
+body.page-id-58 figure.theme-img span.theme-shadow:before {
+	box-shadow:none!important;
+}
+
+body.page-id-58 .content header {
+	display:none;
+}
+
+.post-details h3 {
+	font-family:Helvetica, Arial, Verdana, Tahoma, sans-serif!important;
+}
+
+nav[role="navigation"] li:nth-child(1) {
+	margin-left:0;
+}
