@@ -1,0 +1,29 @@
+.slide{
+    text-align: center;
+font-family: 'Ubuntu', sans-serif;
+color: #222222;
+padding-bottom: 10%;
+}
+h1, h2{
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    color: #4ca6cf;
+}
+h2{
+    font-family: 'Ubuntu', sans-serif;
+}
+h3, h4, h5{
+    font-size: 200%;
+    color: #222222;
+        font-family: 'Roboto', sans-serif;
+}
+.deck-container{
+    background: url("wordpress-logo-680x400.png"), url("img/logo-vagrant.png");
+    background-size: 10%, 3.5%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 45% 93%, 53% 91%;
+}
+blockquote{
+/*    -webkit-transform:scale(.70);*/
+
+}

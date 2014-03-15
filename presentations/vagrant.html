@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Rockin' Local Development w/ Vagrant</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+  <link rel="stylesheet" media="screen" href="my-styles.css">
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+<!--custom fonts-->
+<link href='http://fonts.googleapis.com/css?family=Ubuntu|Roboto' rel='stylesheet' type='text/css'>
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section class="slide">
+      <h1 style="font-size: 350%;">Rockin' Local Development w/ Vagrant</h1>
+    </section>
+
+     <section class="slide">
+      <h1><img src="vagrant-def.png" /></h1>
+    </section>
+
+     <section class="slide">
+      <h1><img src="warningsign.jpg" /></h1>
+    </section>
+
+    <section class="slide">
+      <h1>So What's Vagrant?</h1>
+    </section>
+
+
+    <section class="slide">
+      <blockquote style="margin: 1% 0 10% 0;">Vagrant is free and open-source software for creating and configuring virtual development environments.[1] It can be considered a wrapper around virtualization software such as VirtualBox and configuration management software such as Chef, Salt and Puppet.
+<br><cite>http://en.wikipedia.org/wiki/Vagrant_(software)</cite></blockquote>
+</section>
+
+    <section class="slide">
+      <div style="width: 75%; margin: auto; text-align: center;">
+      <h2>Virtualized Dev Environment</h2>
+        <h3>Predictable</h3>
+        <h3>Portable</h3>
+        <h3>Disposable</h3>
+      </div>
+      </section>
+
+      <section class="slide">
+        <h1>Why Vagrant?</h1>
+      </section>
+
+      <section class="slide">
+        <blockquote style="margin: 1% 0 10% 0;">
+      <pre>"it works on my machine"</pre>
+<span style="font-size: 70%">Nothing makes me go into table-flipping mode faster than this phrase. Eliminate inconsistencies between your development environment and your production environment by mimicking prod as close as possible.</span>
+<br><cite>
+https://jtreminio.com/2013/06/make_vagrant_up_yours/
+</cite></blockquote></section>
+
+      <section class="slide">
+        <h2>Benefits of using Vagrant</h2>
+        <h3>Test &amp; deploy with confidence</h3>
+        <h3>Isolation from local applications</h3>
+        <h3>Quickly onboard new developers</h3>
+        <h3>Reliably change environments</h3>
+      </section>
+
+      <section class="slide">
+        <h2>Your first <code>$ vagrant up</code></h2>
+        <h3>vagrantpress.org</h3>
+        <h3>Varying Vagrant Vagrants</h3>
+        <h3>VCCW</h3>
+      </section>
+
+      <section class="slide">
+        <h2>Beyond your first <code>$ vagrant up</code></h2>
+        <h3>Provisioning</h3>
+        <h3>vvv-init, vvv-nginx &amp; vvv-auto-setup</h3>
+      </section>
+
+
+      <section class="slide">
+        <h2>Roll your own</h2>
+        <h3>Vagrantfile</h3>
+        <h3>puphpet.com</h3>
+      </section>
+
+      <section class="slide">
+        <h2>Extending Vagrant</h2>
+        <h3>Hosts file updater</h3>
+        <h3>wp-cli ssh</h3>
+        <h3>Vagrant multi machine</h3>
+</section>
+      <section class="slide">
+        <h2>Resouces</h2>
+        <h3>docs.vagrantup.com</h3>
+        <h3>vagrantbox.es</h3>
+        <h3>vagrantcloud.com</h3>
+      </section>
+      </section>
+<!--
+    <section class="slide">
+      <h1><img src="bruce-raw.jpg" /></h1>
+    </section> -->
+
+
+
+    <section class="slide">
+      <h1>Q &amp; A</h1>
+      <h2>@rfair</h2>
+    </section>
+
+
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
