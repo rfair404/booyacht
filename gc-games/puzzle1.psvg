@@ -77,10 +77,40 @@ function do_west(){
 
 	$red = (int) '084';
 	$blue = (int) '15';
-	$green = (int) '131';
+	$green = (int) '031';
 
 	$color = 'rgb('.$red.','.$blue.','.$green.')';
 	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\"/>\n";
 } ?>
 </svg>
 <?php
+
+/*
+
+Cache title: @285Technology Series #1 - Color Spheres
+Cache Size: Other
+D/T: 3.5/2
+Posted Coords:  33° 49.639'N  84° 15.148'W
+Final Coords: 33° 50.092'N 84° 15.031'W
+Cache Intro:
+This cache is part of the "@285Technology" Series of Caches by Rfair404 & Boo2931. All of the caches in this series have two things in common.
+1 - They are located close to I-285 - most of the cache locations provide an interesting view of 285 that you've probably never seen before.
+2 - They incorporate some form of technology in the puzzle - use of third party tools such as web browsers may be required.
+
+Cache Description:
+
+The cache is NOT at the posted coordinates. The posted coordinates will take you directly over 285 via an overpass.
+
+Please use extra caution and geo-sense while hunting this cache.
+
+This cache require you to visit webpages located outside of geocaching.com and are in no way audited or approved by groundspeak directly. We've made every effort to ensure that the assets are secure, however you should USE AT YOUR OWN RISK.
+
+Good luck!
+
+Cache Image: http://booyacht.com/gc-games/puzzle1.psvg
+
+Reviewer Note: cache coords are hidden in two of the 10 circles
+Look carefully at the colors of the shapes, twof of them repeat continually - the r,g,b values of the repeating shapes are the coordinates
+
+CO Note: cache is nano in fence along 285/montreal
+*/
