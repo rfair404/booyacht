@@ -2,7 +2,7 @@
 header("Content-type: image/svg+xml");
 //set headers to NOT cache a page
 header("Cache-Control: no-cache, must-revalidate"); //HTTP 1.1
-header("Cache-Coords: N 33° 49.802 W 084° 14.938");//the actual coords for this puzzle
+header("Cache-Coords: N 33 49.802 W 084 14.938");//the actual coords for this puzzle
 header("Pragma: no-cache"); //HTTP 1.0
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 

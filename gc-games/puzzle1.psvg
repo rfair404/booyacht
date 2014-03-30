@@ -58,8 +58,8 @@ function do_north(){
 	$y = floor(rand($r,$svgheight-$r));
 
 	$red = (int) '33';
-	$blue = (int) '48';
-	$green = (int) '205';
+	$blue = (int) '50';
+	$green = (int) '092';
 
 	$color = 'rgb('.$red.','.$blue.','.$green.')';
 	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\"/>\n";
@@ -76,10 +76,11 @@ function do_west(){
 	$y = floor(rand($r,$svgheight-$r));
 
 	$red = (int) '084';
-	$blue = (int) '08';
-	$green = (int) '160';
+	$blue = (int) '15';
+	$green = (int) '131';
 
 	$color = 'rgb('.$red.','.$blue.','.$green.')';
 	print "\t<circle cx=\"$x\" cy=\"$y\" r=\"$r\" style=\"fill:$color;\"/>\n";
 } ?>
 </svg>
+<?php

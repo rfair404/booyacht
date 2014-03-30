@@ -2,7 +2,7 @@
 Deck JS - deck.status
 Copyright (c) 2011 Caleb Troughton
 Dual licensed under the MIT license.
-https://github.com/imakewebthings/deck.js/blob/master/MIT-license.txt
+https://github.com/imakewebthings/blob/master/MIT-license.txt
 */
 
 /*

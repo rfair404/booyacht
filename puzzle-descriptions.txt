@@ -1,0 +1,39 @@
+Description:
+
+
+ "285 Technology" Series #1
+
+This cache is part of the "285 Technology" Series of Caches by Rfair & Boo. All of the caches in this series have two things in common.
+
+1 - they are located close to 285 - most of the cache locations provide an interesting view of 285 that you've probably never seen before.
+
+2 - they incorporate some form of technology in the puzzle - use of third party tools such as web browsers may be required.
+
+Please note that all of these caches require you to visit webpages located outside of geocaching.com and are in no way audited or approved by groundspeak directly. We've made every effort to ensure that the assets are secure, however you should USE AT YOUR OWN RISK.
+
+
+Puzzle 1 - cache coords are hidden in two of the 10 circles
+Look carefully at the colors of the shapes, twof of them repeat continually - the r,g,b values of the repeating shapes are the coordinates
+Final Location must have coords ending in less than 255
+http://booyacht.com/gc-games/puzzle1.psvg
+33° 48.039'N
+84° 15.045'W
+
+
+Puzzle 2 - cache coords are hidden in two of the rectangles
+Look carefully at the width and heights of the shapes, twof of them repeat continually - the w/h values of the repeating rectangles are the coordinates
+Final location must have coords less than 300 Ideally
+http://booyacht.com/gc-games/puzzle2.psvg
+33° 49.409'N
+84° 15.120'W
+
+Puzzle 3 - cache coords are hidden in
+Not ready yet, puzzle must be revisited
+
+Puzzle 4 - cache coords are output in the response headers of the image
+Shapes are just a distraction
+
+Puzzle 5 - cache coords are set in a cookie
+Shapes are a distraction
+
+Puzzle 6 - cache coords are hidden in a wifi signal. if you join the right one your ip address will be the coordinates
