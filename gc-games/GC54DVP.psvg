@@ -1,7 +1,7 @@
 <?php
 header("Content-type: image/svg+xml");
-setcookie('north.coordinates', '33 52.072', '0' );
-setcookie('west.coordinates', '084 14.997' , '0');
+setcookie('north.coordinates', '33_51.253', '0' );
+setcookie('west.coordinates', '084_14.828' , '0');
 //set headers to NOT cache a page
 header("Cache-Control: no-cache, must-revalidate"); //HTTP 1.1
 header("Pragma: no-cache"); //HTTP 1.0
