@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Getting Help with WordPress</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/neon.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section class="slide">
+      <h2>Getting Help with WordPress</h2>
+      <h1>a Beginners Guide to Getting Unstuck</h1>
+    </section>
+
+    <section class="slide">
+      <h2>Who is this guy?</h2>
+      <section class="slide">My name is Russell Fair</section>
+      <section class="slide">I'm an Atlanta native &amp; WordPress fanatic</section>
+      <section class="slide">I'm into geocaching and taking things apart</section>
+      <section class="slide">On the twitter @rfair</section>
+      <section class="slide">Submit pull requests at github.com/rfair404</section>
+    </section>
+
+    <section class="slide"><h1>There is NO WAY to fix not having a backup</h1></section>
+
+     <section class="slide">
+       <h2>So you think you've got WordPress problems?</h2>
+       <section class="slide">Identify and isolate the problem first</section>
+       <section class="slide">Decide which type of support you <em>really</em> need</section>
+       <section class="slide">Write it down (sticky notes)</section>
+       <section class="slide">Workarounds &amp; temporary fixes</section>
+    </section>
+
+    <section class="slide">
+        <h2>Isolating actual issues</h2>
+        <section class="slide">WordPress Core, Plugins, Themes, Thirdparty Services, Browser or Hosting?</section>
+        <section class="slide">Steps to reproduce the problem</section>
+        <section class="slide">Update everything</section>
+        <section class="slide">Deactivate plugins (divide and conquor)</section>
+        <section class="slide">Activate twentyfourteen</section>
+        <section class="slide">Debug bar</section>
+        <section class="slide">Try Firefox</section>
+   </section>
+
+    <section class="slide">
+     <h2>Getting help (the WordPress way)</h2>
+        <section class="slide">Not Paid != FREE</section>
+        <section class="slide">WordPress.org support forums</section>
+        <section class="slide">WordPress.org Codex</section>
+        <section class="slide">#wordpress IRC</section>
+        <section class="slide">WordPress Answers (stackexchange)</section>
+        <section class="slide">WP Engine, LiquidWeb, etc</section>
+        <section class="slide">Plugin or theme support forum</section>
+        <section class="slide">Google Advance Search</section>
+        <section class="slide">Participate in local wp meetups &amp; WordCamps</section>
+        <section class="slide">Buddy System</section>
+        <section class="slide">Buy me a beer</section>
+   </section>
+
+   <section class="slide">
+      <h2>Premium Support Options</h2>
+        <section class="slide">Cheap, Good or Fast</section>
+        <section class="slide">CodePoet</section>
+        <section class="slide">Get a local referral</section>
+        <section class="slide">Short term projects</section>
+        <section class="slide">Premium plugins &amp; theme support</section>
+        <section class="slide">Craigslist if for selling old washing machines</section>
+    </section>
+
+    <section class="slide">
+      <h2>Linkage Gallore</h2>
+      <ul>
+        <li>http://wordpress.org/support/</li>
+        <li>http://codex.wordpress.org/</li>
+        <li>http://codex.wordpress.org/Getting_More_Help</li>
+        <li>http://codex.wordpress.org/WordPress_IRC_Live_Help</li>
+        <li>http://trac.wordpress.org/</li>
+        <li>http://jobs.wordpress.net/</li>
+        <li>http://wordpress.stackexchange.com/</li>
+        <li>http://en.support.wordpress.com/</li>
+        <li>http://learn.wordpress.com/</li>
+        <li>http://codepoet.com/</li>
+        <li>http://wpengine.com/support/</li>
+        <li>http://www.liquidweb.com/kb/</li>
+        <li>http://www.siteground.com/tutorials/wordpress/</li>
+        <li>http://www.wpbeginner.com/</li>
+      </ul>
+    </section>
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>

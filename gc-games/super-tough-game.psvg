@@ -1,6 +1,7 @@
 <?php
+// puzzle  # 4 GC55VNK
 header("Content-type: image/svg+xml");
-header("Coordinates: n33 47.339 w84 8.782");
+header("Coordinates: N 33 46.247 W 84 8.782");
 //set headers to NOT cache a page
 header("Cache-Control: no-cache, must-revalidate"); //HTTP 1.1
 header("Pragma: no-cache"); //HTTP 1.0
